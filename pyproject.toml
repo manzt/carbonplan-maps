@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "carbonplan"
+version = "0.1.0"
+description = "A Jupyter Widget for @carbonplan/maps"
+authors = [
+    { name = "Trevor Manz", email = "trevor.j.manz@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+dependencies = [
+    "anywidget>=0.6.1"
+]
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = [
+    "jupyterlab",
+    "watchfiles"
+]
+
+[tool.hatch.envs.default]
+features = ["dev"]
