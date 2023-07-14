@@ -2,7 +2,8 @@
 
 # carbonplan
 
-A Jupyter Widget for `@carbonplan/maps`. Built with [`anywidget`](https://github.com/manzt/anywidget).
+A Jupyter Widget for `@carbonplan/maps`. Built with
+[`anywidget`](https://github.com/manzt/anywidget).
 
 # usage
 
@@ -18,7 +19,6 @@ map_widget
 ```
 
 ![Screen Recording 2023-07-13 at 10 55 42 PM](https://github.com/manzt/carbonplan/assets/24403730/cee6d5ef-f02c-475d-9ab7-eef745142889)
-
 
 combine with other widgets...
 
