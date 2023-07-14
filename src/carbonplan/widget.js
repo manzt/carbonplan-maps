@@ -1,6 +1,6 @@
 import React from "https://esm.sh/react@18";
 import ReactDOM from "https://esm.sh/react-dom@18/client";
-import { Map, Raster } from "https://esm.sh/@carbonplan/maps@3?deps=react@18";
+import { Line, Map, Raster } from "https://esm.sh/@carbonplan/maps@3?deps=react@18";
 import { useColormap } from "https://esm.sh/@carbonplan/colormaps@4?deps=react@18";
 
 let WidgetModelContext = React.createContext();
@@ -37,6 +37,10 @@ function App() {
     React.createElement(
       Map,
       null,
+      React.createElement(
+        Line,
+        {color: "white", source: "https://storage.googleapis.com/carbonplan-maps/basemaps/land", variable: "land" },
+      ),
       React.createElement(
         Raster,
         { colormap, clim, source, variable, dimensions, opacity },
