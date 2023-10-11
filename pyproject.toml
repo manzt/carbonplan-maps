@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "carbonplan"
+name = "carbonplan-maps"
 version = "0.1.0"
 description = "A Jupyter Widget for @carbonplan/maps"
 authors = [
