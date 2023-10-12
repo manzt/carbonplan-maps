@@ -1,6 +1,6 @@
 **Here be dragons** 🐉
 
-# carbonplan
+# carbonplan-maps-widget
 
 A Jupyter Widget for `@carbonplan/maps`. Built with
 [`anywidget`](https://github.com/manzt/anywidget).
@@ -8,9 +8,9 @@ A Jupyter Widget for `@carbonplan/maps`. Built with
 # usage
 
 ```python
-import carbonplan
+import carbonplan_maps
 
-map_widget = carbonplan.Widget(
+map_widget = carbonplan_maps.Widget(
     source="https://carbonplan-maps.s3.us-west-2.amazonaws.com/v2/demo/2d/tavg",
     variable="tavg",
     dimensions=("y", "x"),
