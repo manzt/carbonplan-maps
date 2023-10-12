@@ -1,12 +1,13 @@
-import React from 'https://esm.sh/react@18'
-import ReactDOM from 'https://esm.sh/react-dom@18/client'
+import { useColormap } from 'https://esm.sh/@carbonplan/colormaps@4?deps=react@18'
 import {
+  Fill,
   Line,
   Map,
   Raster,
   RegionPicker,
 } from 'https://esm.sh/@carbonplan/maps@3?deps=react@18'
-import { useColormap } from 'https://esm.sh/@carbonplan/colormaps@4?deps=react@18'
+import ReactDOM from 'https://esm.sh/react-dom@18/client'
+import React from 'https://esm.sh/react@18'
 
 let bucket = 'https://storage.googleapis.com/carbonplan-maps/'
 
@@ -33,6 +34,7 @@ function useModelState(name) {
 }
 
 function App() {
+
   let [source] = useModelState('source')
   let [colormap_str] = useModelState('colormap')
   let [clim] = useModelState('clim')
@@ -61,6 +63,11 @@ function App() {
       Map,
       null,
       region && React.createElement(RegionPicker, null),
+      React.createElement(Fill, {
+        color: '#1b1e23',
+        source: bucket + 'basemaps/ocean',
+        variable: 'ocean',
+      }),
       React.createElement(Line, {
         color: 'white',
         source: bucket + 'basemaps/land',
@@ -76,8 +83,8 @@ function App() {
         regionOptions,
         selector,
         mode,
-      }),
-    ),
+      })
+    )
   )
 }
 
@@ -88,8 +95,8 @@ export function render({ model, el }) {
     React.createElement(
       WidgetModelContext.Provider,
       { value: model },
-      React.createElement(App),
-    ),
+      React.createElement(App)
+    )
   )
   return () => root.unmount()
 }
